@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Master Hosting — Dashboard</title>
+  <link rel="stylesheet" href="/dashboard/style.css">
+</head>
+<body>
+  <div id="login" class="center">
+    <div class="card login-card">
+      <div class="brand">MASTER<span>HOSTING</span></div>
+      <p>Dashboard d'administration sécurisé</p>
+      <input id="token" type="password" autocomplete="off" placeholder="Clé du dashboard">
+      <button id="loginBtn">Connexion</button>
+      <small id="loginError"></small>
+    </div>
+  </div>
+
+  <div id="app" hidden>
+    <aside>
+      <div class="brand">MASTER<span>HOSTING</span></div>
+      <nav>
+        <button data-page="overview" class="active">📊 Vue générale</button>
+        <button data-page="members">👥 Membres</button>
+        <button data-page="tickets">🎫 Tickets</button>
+        <button data-page="moderation">🛡️ Modération</button>
+        <button data-page="giveaways">🎁 Giveaways</button>
+        <button data-page="ptero">🖥️ Pterodactyl</button>
+        <button data-page="logs">📜 Audit logs</button>
+      </nav>
+      <button id="logout" class="logout">Déconnexion</button>
+    </aside>
+    <main>
+      <header><div><h1 id="title">Vue générale</h1><span id="status">Connexion…</span></div><button id="refresh">↻ Actualiser</button></header>
+      <section id="content"></section>
+    </main>
+  </div>
+  <script src="/dashboard/app.js" defer></script>
+</body>
+</html>
