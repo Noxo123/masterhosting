@@ -4,7 +4,7 @@
   "description": "Master Hosting — bot Discord + dashboard d'administration sécurisé",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node dashboard/server.js",
     "dashboard": "node dashboard/server.js",
     "check": "node --check index.js && node --check dashboard/server.js"
   },
